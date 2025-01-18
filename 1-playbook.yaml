@@ -1,11 +1,11 @@
-- name: ping
+- name: install nginx
   hosts: web
   become: yes
   tasks:
   - name: install nginx
     ansible.bulitin.package:
       name: nginx
-      state: installed
+      state: present
 
   - name: start nginx
     ansible.bulitin.service:
